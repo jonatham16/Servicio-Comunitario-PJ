@@ -1,4 +1,12 @@
-function selectEfecto(){
+/*	OJO todas las funciones deben ir separadas por ";" es decir:
+
+ 	function f1(){};
+	function f2(){};
+	var A = "algo";
+*/
+
+// funcion para hacer que los select tenga en elfecto y estilo de autocompletar y select a la vez usando jquery.
+function agergarEfectoSelect(){
 
 $.widget( "ui.combobox", {
 			_create: function() {
@@ -99,4 +107,24 @@ $.widget( "ui.combobox", {
 				$.Widget.prototype.destroy.call( this );
 			}
 		});
-}
+	
+};
+
+//Funcion para colocar los iconos y tooltips a los botones modificar eliminar y guardar usando jquery
+function agregarCaracteristicasBotones(){
+	
+		$('.botonModificar').attr( "title", "Modificar" );
+		$('.botonEliminar').attr( "title", "Eliminar" );
+		$('#botonGuardar').attr( "title", "Guardar" );
+		
+	        var ui_icon_lapiz = {icons:{primary:"ui-icon-pencil"},text:false}; //icono de lapiz
+                var ui_icon_tijeras = {icons:{primary:"ui-icon-scissors"},text:false};//icono de tijeras
+                var ui_icon_disco = {icons:{primary:"ui-icon-disk"}}; //icono de disquete
+
+                $('.botonModificar').button(ui_icon_lapiz);
+                $('.botonEliminar').button(ui_icon_tijeras);
+                $('#botonGuardar').button(ui_icon_disco);
+	
+
+};
+
