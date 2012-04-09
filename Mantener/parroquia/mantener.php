@@ -10,6 +10,7 @@ require_once ("../../lib/funciones.php");
 	<script src="../../js/jquery-1.7.1.min.js" ></script>
 	<script src="../../js/jquery-ui-1.8.17.custom.min.js" ></script>
 	<script src="../../js/efectos.js" ></script>
+	<script src="../../js/n.js" ></script>
 	<style>
 	.ui-button { margin-left: -1px; }
 	.ui-button-icon-only .ui-button-text { padding: 0.35em; } 
@@ -20,11 +21,13 @@ require_once ("../../lib/funciones.php");
 
 	  	selectEfecto();
 		$("#selectvicaria").combobox();
+		colocarTitulosBotones();
+
+
 
 	        var ui_icon_lapiz = {icons:{primary:"ui-icon-pencil"},text:false}; //icono de lapiz
                 var ui_icon_tijeras = {icons:{primary:"ui-icon-scissors"},text:false};//icono de tijeras
                 var ui_icon_disco = {icons:{primary:"ui-icon-disk"}}; //icono de disquete
-
 
                 $('.botonModificar').button(ui_icon_lapiz);
                 $('.botonEliminar').button(ui_icon_tijeras);
@@ -114,7 +117,7 @@ if($nfilas==0){
 }else{   
 	for($i=0;$i<$nfilas;$i++){ 
 ?>
-	<option value="<? echo $vicarias[$i][0]; ?>"><? echo $vicarias[$i][2]; ?></option>
+	<option value="<? echo $vicarias[$i][0]; ?>"><? echo $vicarias[$i][1]; ?></option>
 
 <?php 
 	}
