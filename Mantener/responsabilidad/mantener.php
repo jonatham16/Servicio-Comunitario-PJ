@@ -12,10 +12,9 @@ require_once ("../../lib/funciones.php");
 	<script src="../../js/efectos.js" ></script>
 	<script>
 	$(document).ready(function(){
-
+	  	
 	  agregarCaracteristicasBotones();
-	
-	 	
+
           $('#formu').submit(function(evento){ //en el evento submit del fomulario
 	          evento.preventDefault();  //detenemos el comportamiento por default
  			if(confirm("Esta Seguro?")){
@@ -56,7 +55,7 @@ require_once ("../../lib/funciones.php");
 	   		var id= $(this).attr("value");			  
 			var nombre =  $("input#nombre"+id).attr("value");
  	                var descripcion = $("input#descripcion"+id).attr("value");
-			alert(id+nombre+descripcion);				
+							
 	    		if(id!="" && nombre!="" && descripcion!=""){
 			        if(confirm("Esta Seguro?")){
 				        $.ajax({
@@ -72,6 +71,7 @@ require_once ("../../lib/funciones.php");
 			        }
 			}else alert("Debe rellenar todos los campos");
            });
+
 	
 	});
 	</script>

@@ -14,7 +14,7 @@ require_once ("../../lib/funciones.php");
 	$(document).ready(function(){
 
 	  agregarCaracteristicasBotones();
-	
+		
 	 	
           $('#formu').submit(function(evento){ //en el evento submit del fomulario
 	          evento.preventDefault();  //detenemos el comportamiento por default

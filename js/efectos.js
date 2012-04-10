@@ -124,7 +124,7 @@ function agregarCaracteristicasBotones(){
                 $('.botonModificar').button(ui_icon_lapiz);
                 $('.botonEliminar').button(ui_icon_tijeras);
                 $('#botonGuardar').button(ui_icon_disco);
-	
+		
 
 };
 
