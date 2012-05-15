@@ -1,0 +1,23 @@
+commit d146364efde41c2e76fb504bcc843fc81c0826ce
+Author: root <root@Titan.(none)>
+Date:   Tue Apr 10 16:47:44 2012 -0430
+
+     Cree las pag de mantener de ewin, en los campos para las fechas use el componente de jquery-ui datapicker, asi como se modificaron sus opciones para que el lenguaje fuera en español
+
+commit eb58b858a99c3d622006d11a7b0250b187ba6257
+Author: root <root@Titan.(none)>
+Date:   Mon Apr 9 14:39:52 2012 -0430
+
+    Realice refactoring a las pag mantener para que las caracteristicas de los botones como tooltips e iconos estuvieran en una funcion dentro del archivo efectos.js. Se probo y funciona bien 100%. Faltaria haces los mismo con la funcionalidad de los botones y el ajax
+
+commit edc38c3c3a02829bc8eafaf5e3eb6bd1146ab5a8
+Author: root <root@Titan.(none)>
+Date:   Sun Apr 8 21:44:45 2012 -0430
+
+    Agregue la lib n.js, para agregar los tooltips a los botones, dicho efecto no pude incluirlo en efectos.js
+
+commit 996bb4aedf71571bcf30525b98cb90d5deccda69
+Author: root <root@Titan.(none)>
+Date:   Sat Apr 7 12:47:53 2012 -0430
+
+    Mi primer respaldo
