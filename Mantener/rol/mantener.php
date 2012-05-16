@@ -12,7 +12,13 @@ require_once ("../../lib/funciones.php");
 	<script>
 	$(document).ready(function(){
 	  
+		
 
+		  // titulos
+		$('.botonModificar').attr( "title", "Modificar" );
+		$('.botonEliminar').attr( "title", "Eliminar" );
+		$('#botonGuardar').attr( "title", "Guardar" );
+	  
 	        var ui_icon_lapiz = {icons:{primary:"ui-icon-pencil"},text:false}; //icono de lapiz
                 var ui_icon_tijeras = {icons:{primary:"ui-icon-scissors"},text:false};//icono de tijeras
                 var ui_icon_disco = {icons:{primary:"ui-icon-disk"}}; //icono de disquete
@@ -63,7 +69,7 @@ require_once ("../../lib/funciones.php");
 	   		var id= $(this).attr("value");			  
 			var nombre =  $("input#nombre"+id).attr("value");
  	                var descripcion = $("input#descripcion"+id).attr("value");
-			alert(id+nombre+descripcion);				
+			
 	    		if(id!="" && nombre!="" && descripcion!=""){
 			        if(confirm("Esta Seguro?")){
 				        $.ajax({

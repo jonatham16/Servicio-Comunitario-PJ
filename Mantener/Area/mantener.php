@@ -10,7 +10,7 @@ require_once ("../../lib/funciones.php");
 	<script src="../../js/jquery-1.7.1.min.js" ></script>
 	<script src="../../js/jquery-ui-1.8.17.custom.min.js" ></script>
 	<script src="../../js/efectos.js" ></script>
-	<script src="../../js/n.js" ></script>
+	<script src="../../js/funcionalidades.js" ></script>
 	<style>
 	.ui-button { margin-left: -1px; }
 	.ui-button-icon-only .ui-button-text { padding: 0.35em; } 
@@ -18,19 +18,8 @@ require_once ("../../lib/funciones.php");
 	</style>
 	<script>	
 	$(document).ready(function(){
-	  	selectEfecto();
-		$("#selectvicaria").combobox();
-		colocarTitulosBotones();
 
-
-
-	        var ui_icon_lapiz = {icons:{primary:"ui-icon-pencil"},text:false}; //icono de lapiz
-                var ui_icon_tijeras = {icons:{primary:"ui-icon-scissors"},text:false};//icono de tijeras
-                var ui_icon_disco = {icons:{primary:"ui-icon-disk"}}; //icono de disquete
-
-                $('.botonModificar').button(ui_icon_lapiz);
-                $('.botonEliminar').button(ui_icon_tijeras);
-                $('#botonGuardar').button(ui_icon_disco);
+		agregarCaracteristicasBotones();
 	
 	 	
           $('#formu').submit(function(evento){ //en el evento submit del fomulario
@@ -98,9 +87,9 @@ require_once ("../../lib/funciones.php");
 <body>
 	<div id="formulario" class="ui-widget" >
 	<form action="insertar.php" id="formu" method="post">
-	<input type="text" name="nombre" id="nombre" required placeholder="Escriba el nombre del area"/>
+	<input type="text" name="nombre" id="nombre" required placeholder="Indique la Nueva Area"/>
 <br>
-	<input type="text" name="descripcion" id="descripcion" required placeholder="Escriba aqui la descripcion del area"/>
+	<input type="text" name="descripcion" id="descripcion" required placeholder="Indique la Descripcion"/>
 <br>
 	
 

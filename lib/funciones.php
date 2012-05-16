@@ -85,7 +85,7 @@ function listadoRol(){
 function listadoPrivilegio(){
     	
         $oPdo=SPDO2::getInstancia();
-        $consulta=$oPdo->pdo->prepare("select * from privilegio");
+        $consulta=$oPdo->pdo->prepare("select * from privilegio WHERE activo =1 ");
     	$consulta->execute() or die("Error listando los privilegios");
         return $consulta->fetchAll();    
 } 

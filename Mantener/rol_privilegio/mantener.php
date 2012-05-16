@@ -9,18 +9,20 @@ require_once ("../../lib/funciones.php");
 	<link rel="stylesheet" href="../../css/start/jquery-ui-1.8.17.custom.css"  />
 	<script src="../../js/jquery-1.7.1.min.js" type="text/javascript"></script>
 	<script src="../../js/jquery-ui-1.8.17.custom.min.js" type="text/javascript"></script>
+	<script src="../../js/efectos.js" ></script>
+	<style>
+	.ui-button { margin-left: -1px; }
+	.ui-button-icon-only .ui-button-text { padding: 0.35em; } 
+	.ui-autocomplete-input { margin: 0; padding: 0.48em 0 0.47em 0.45em; }
+	</style>
 	<script>
 	$(document).ready(function(){
 	  
+		agergarEfectoSelect();
+		$("#sel_rol").combobox();
+		$("#sel_privilegio").combobox();
+		agregarCaracteristicasBotones();
 
-	        var ui_icon_lapiz = {icons:{primary:"ui-icon-pencil"},text:false}; //icono de lapiz
-                var ui_icon_tijeras = {icons:{primary:"ui-icon-scissors"},text:false};//icono de tijeras
-                var ui_icon_disco = {icons:{primary:"ui-icon-disk"}}; //icono de disquete
-
-
-                $('.botonModificar').button(ui_icon_lapiz);
-                $('.botonEliminar').button(ui_icon_tijeras);
-                $('#botonGuardar').button(ui_icon_disco);
 	
 	 	
           $('#formu').submit(function(evento){ //en el evento submit del fomulario
@@ -88,7 +90,7 @@ require_once ("../../lib/funciones.php");
 <div id="formulario" class="ui-widget" >
 <?php
 $rol = listadoRol();
-echo 'Selecciona Rol <select name="sel_rol">';
+echo 'Selecciona Rol <select name="sel_rol" id = "sel_rol">';
 $nfilas = count($rol);
 for($i=0;$i<$nfilas;$i++){
 	echo '<option value="'.$rol[$i][0].'">'.$rol[$i][1].'</option>';
@@ -97,7 +99,7 @@ echo '</select> <br />' ;
 
 
 $pri = listadoPrivilegio();
-echo 'Selecciona Privilegio <select name="sel_privilegio">';
+echo 'Selecciona Privilegio <select name="sel_privilegio" id = "sel_privilegio">';
 $nfilas = count($pri);
 for($i=0;$i<$nfilas;$i++){
 	echo '<option value="'.$pri[$i][0].'">'.$pri[$i][1].'</option>';

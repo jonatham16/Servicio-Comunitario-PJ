@@ -6,21 +6,20 @@ require_once ("../../lib/funciones.php");
 <head>
 	<meta charset="UTF-8">
 	<title>Mantener Profesion</title>
-	<link rel="stylesheet" href="../../css/start/jquery-ui-1.8.17.custom.css"  />
-	<script src="../../js/jquery-1.7.1.min.js" type="text/javascript"></script>
-	<script src="../../js/jquery-ui-1.8.17.custom.min.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="../../css/start/jquery-ui-1.8.17.custom.css"  />
+	<script src="../../js/jquery-1.7.1.min.js" ></script>
+	<script src="../../js/jquery-ui-1.8.17.custom.min.js" ></script>
+	<script src="../../js/efectos.js" ></script>
+	<script src="../../js/funcionalidades.js" ></script>
+	<style>
+	.ui-button { margin-left: -1px; }
+	.ui-button-icon-only .ui-button-text { padding: 0.35em; } 
+	.ui-autocomplete-input { margin: 0; padding: 0.48em 0 0.47em 0.45em; }
+	</style>
 	<script>
 	$(document).ready(function(){
-	  
-
-	        var ui_icon_lapiz = {icons:{primary:"ui-icon-pencil"},text:false}; //icono de lapiz
-                var ui_icon_tijeras = {icons:{primary:"ui-icon-scissors"},text:false};//icono de tijeras
-                var ui_icon_disco = {icons:{primary:"ui-icon-disk"}}; //icono de disquete
-
-
-                $('.botonModificar').button(ui_icon_lapiz);
-                $('.botonEliminar').button(ui_icon_tijeras);
-                $('#botonGuardar').button(ui_icon_disco);
+		
+	   agregarCaracteristicasBotones();
 	
 	 	
           $('#formu').submit(function(evento){ //en el evento submit del fomulario
@@ -86,7 +85,7 @@ require_once ("../../lib/funciones.php");
 <body>
 	<div id="formulario" class="ui-widget" >
 	<form action="insertar.php" id="formu" method="post">
-	<input type="text" name="nombre" id="nombre" required placeholder=" Profesion "/>
+	<input type="text" name="nombre" id="nombre" required placeholder="Indique la nueva Profesion"/>
 <br>
 	
 	<button type="submit" id="botonGuardar" >Guardar</button>
