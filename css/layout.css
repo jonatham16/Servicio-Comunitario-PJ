@@ -1,0 +1,72 @@
+#main {width:960px; margin:0 auto;}
+
+#header {height:475px; background:url(images/header-bg.jpg) no-repeat left bottom;}
+#header, #content { font-size:0.69em;}
+
+.col-1, .col-2, .col-3 { float:left;}
+
+/*======= index.html =======*/
+#page1 #content .row-1 .col-1 {width:316px; margin-right:5px;}
+#page1 #content .row-1 .col-2 {width:317px; margin-right:5px;}
+#page1 #content .row-1 .col-3 {width:317px;}
+#page1 #content .row-2 .line-ver { background:url(images/line-ver.gif) 613px top repeat-y; width:100%;}
+#page1 #content .row-2 .line-ver-top { background:url(images/line-ver-top.gif) 613px top no-repeat; width:100%;}
+#page1 #content .row-2 .line-ver-bottom { background:url(images/line-ver-bottom.gif) no-repeat 613px bottom;}
+#page1 #content .row-2 .col-1 { width:582px; margin-right:59px;}
+#page1 #content .row-2 .col-2 { width:292px;}
+
+/*======= index-1.html =======*/
+#page2 #content .row-1 .col-1 {width:316px; margin-right:5px;}
+#page2 #content .row-1 .col-2 {width:317px; margin-right:5px;}
+#page2 #content .row-1 .col-3 {width:317px;}
+#page2 #content .row-2 .line-ver { background:url(images/line-ver.gif) 613px top repeat-y; width:100%;}
+#page2 #content .row-2 .line-ver-top { background:url(images/line-ver-top.gif) 613px top no-repeat; width:100%;}
+#page2 #content .row-2 .line-ver-bottom { background:url(images/line-ver-bottom.gif) no-repeat 613px bottom;}
+#page2 #content .row-2 .col-1 { width:582px; margin-right:59px;}
+#page2 #content .row-2 .col-2 { width:292px;}
+
+/*======= index-2.html =======*/
+#page3 #content .row-1 .col-1 {width:316px; margin-right:5px;}
+#page3 #content .row-1 .col-2 {width:317px; margin-right:5px;}
+#page3 #content .row-1 .col-3 {width:317px;}
+#page3 #content .row-2 .line-ver { background:url(images/line-ver.gif) 613px top repeat-y; width:100%;}
+#page3 #content .row-2 .line-ver-top { background:url(images/line-ver-top.gif) 613px top no-repeat; width:100%;}
+#page3 #content .row-2 .line-ver-bottom { background:url(images/line-ver-bottom.gif) no-repeat 613px bottom;}
+#page3 #content .row-2 .col-1 { width:582px; margin-right:59px;}
+#page3 #content .row-2 .col-2 { width:292px;}
+#page3 #content .row-2 .col-1 .col-1 { width:247px; margin-right:49px;}
+
+/*======= index-3.html =======*/
+#page4 #content .row-1 .col-1 {width:316px; margin-right:5px;}
+#page4 #content .row-1 .col-2 {width:317px; margin-right:5px;}
+#page4 #content .row-1 .col-3 {width:317px;}
+#page4 #content .row-2 .line-ver { background:url(images/line-ver.gif) 613px top repeat-y; width:100%;}
+#page4 #content .row-2 .line-ver-top { background:url(images/line-ver-top.gif) 613px top no-repeat; width:100%;}
+#page4 #content .row-2 .line-ver-bottom { background:url(images/line-ver-bottom.gif) no-repeat 613px bottom;}
+#page4 #content .row-2 .col-1 { width:582px; margin-right:59px;}
+#page4 #content .row-2 .col-2 { width:292px;}
+
+/*======= index-4.html =======*/
+#page5 #content .row-1 .col-1 {width:316px; margin-right:5px;}
+#page5 #content .row-1 .col-2 {width:317px; margin-right:5px;}
+#page5 #content .row-1 .col-3 {width:317px;}
+#page5 #content .row-2 .line-ver { background:url(images/line-ver.gif) 613px top repeat-y; width:100%;}
+#page5 #content .row-2 .line-ver-top { background:url(images/line-ver-top.gif) 613px top no-repeat; width:100%;}
+#page5 #content .row-2 .line-ver-bottom { background:url(images/line-ver-bottom.gif) no-repeat 613px bottom;}
+#page5 #content .row-2 .col-1 { width:582px; margin-right:59px;}
+#page5 #content .row-2 .col-2 { width:292px;}
+
+/*======= index-5.html =======*/
+#page6 #content .row-2 .line-ver { background:url(images/line-ver.gif) 499px top repeat-y; width:100%;}
+#page6 #content .row-2 .line-ver-top { background:url(images/line-ver-top.gif) 499px top no-repeat; width:100%;}
+#page6 #content .row-2 .line-ver-bottom { background:url(images/line-ver-bottom.gif) no-repeat 499px bottom;}
+#page6 #content .row-2 .col-1 { width:475px; margin-right:55px;}
+#page6 #content .row-2 .col-2 { width:371px;}
+#page6 #content .row-2 .col-1 .col-1 { width:171px; margin-right:59px;}
+#page6 #content .row-2 .col-1 .col-2 { width:241px;}
+
+
+/*=========================*/
+
+
+#footer {height:105px; background:url(images/footer-bg.gif) left top repeat-x; font-size:.625em;}

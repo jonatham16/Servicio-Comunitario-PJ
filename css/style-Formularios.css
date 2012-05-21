@@ -1,0 +1,189 @@
+/* Formatear el formulario a dos columnas */
+#page6 #content .row-2 .contenido{
+    padding:4px;
+    height:28px;
+    float:left;
+}
+
+/*
+.header{
+    display:table;
+    height:36px;
+    float:left;
+    text-align:center;
+}
+.ui-widget-header span{
+    display:table-cell;
+    vertical-align:middle;
+}
+.titulo{
+    font-weight:bold;
+    width:1024px;
+    display:table;
+    height:35px;
+    float:left;
+    text-align:center;
+    margin-top:15px;
+}
+.titulo span{
+    display:table-cell;
+    vertical-align:middle;
+}
+.subtitulo{
+    float:left;
+    font-size:14;
+    height:25px;
+    text-transform:uppercase;
+    text-align:center;
+    color:darkblue;
+    background-color:#E4E4E4;
+    width:1024px;
+    display:table;
+}
+
+.subtitulo span{
+    display:table-cell;
+    vertical-align:middle;
+}*/
+#contenedor .izquierda {
+float: left;
+clear: left;
+}
+#contenedor .derecha {
+float: right;
+clear: right;
+}
+#contenedor {
+background: #FFF;
+border: 1px solid silver;
+margin: 1em auto;
+padding: 1em;
+width: 768px;
+}
+#contenedor span.requerido {
+font-size: 1.3em;
+font-weight: bold;
+color: #C00;
+}
+#contenedor h2 {
+font: normal 2em arial, sans-serif;
+margin: 0;
+}
+#contenedor ul li.botones {
+border-top: 2px solid #CCC;
+clear: both;
+float: none;
+padding: 1em 0;
+margin-top: 1em;
+text-align: right;
+width: 100%;
+}
+#contenedor ul li.botones input {
+font-size: 1.3em;
+}
+#contenedor ul li {
+margin: 0.5em 0;
+padding: 0.5em;
+width: 46%;
+}
+#contenedor ul li label.titulo {
+font-weight: bold;
+}
+#contenedor ul li div span {
+float: left;
+padding: 0.3em 0;
+}
+#contenedor ul li div span.completo {
+width: 100%;
+}
+#contenedor ul li div span.mitad {
+width: 50%;
+}
+#contenedor ul li div span.tercio {
+width: 33%;
+}
+#contenedor ul li div span.dostercios {
+width: 66%;
+}
+#contenedor ul li div span label {
+display: block;
+font: normal 0.8em arial, sans-serif;
+color: #333;
+}
+#contenedor ul li p.ayuda {
+display: none;
+}
+#contenedor ul li input {
+padding: 0.2em;
+}
+#contenedor input#apellido1, input#apellido2, input#direccion, input#email, input#contrasena, input#confirmar {
+width: 260px;
+}
+#contenedor input#codigopostal {
+width: 80px;
+}
+#contenedor select#provincia {
+width: 90px;
+}
+#contenedor select#pais {
+width: 150px;
+}
+#contenedor input#telefonofijo, input#telefonomovil {
+width: 135px;
+}
+/* Cambiar el color en el :hover y resaltar los campos en el :focus */
+#contenedor ul li:hover {
+background-color: #FF9;
+}
+#contenedor ul li.botones:hover {
+background-color: transparent;
+}
+#contenedor ul li input:focus {
+border: 2px solid #E6B700;
+}
+/* Formatear el formulario a una columna */
+#contenedor ul li.izquierda, #contenedor ul li.derecha {
+float: none;
+width: auto;
+}
+#contenedor ul li {
+overflow: hidden;
+}
+#contenedor ul li label.titulo {
+float: left;
+width: 150px;
+}
+#contenedor ul li div {
+margin-left: 160px;
+}
+/* Aspecto final del formulario con los mensajes de ayuda */
+#contenedor h2 {
+margin-bottom: 0.3em;
+}
+#contenedor ul li {
+border-top: 1px solid #CCC;
+margin: 0;
+padding: 1em;
+}
+#contenedor ul li.botones {
+margin: 0;
+}
+#contenedor ul li label.titulo {
+text-align: right;
+width: 100px;
+}
+#contenedor ul li div {
+margin-left: 110px;
+overflow: hidden;
+}
+#contenedor ul li {
+position: relative;
+}
+#contenedor ul li:hover p.ayuda {
+display: block;
+margin: 0.3em;
+position: absolute;
+top: 0;
+right: 0;
+width: 150px;
+}

@@ -89,12 +89,12 @@ function listadoPrivilegio(){
     	$consulta->execute() or die("Error listando los privilegios");
         return $consulta->fetchAll();    
 } 
-function listadoRol_Privilegio(){    	
+function listadoRol_Privilegio(){    
         $oPdo=SPDO2::getInstancia();
-        $consulta=$oPdo->pdo->prepare("select rol_privilegio.rol_id, rol.descripcion, rol_privilegio.pvo_id, privilegio.descripcion from rol, privilegio, rol_privilegio WHERE rol.rol_id = rol_privilegio.rol_id and rol_privilegio.pvo_id = privilegio.pvo_id and rol_privilegio.activo=1");
-    	$consulta->execute() or die("Error listando las relacionas");
+        $consulta=$oPdo->pdo->prepare("select rol_privilegio.rol_id, rol.nombre, rol_privilegio.pvo_id, privilegio.nombre from rol, privilegio, rol_privilegio WHERE rol.rol_id = rol_privilegio.rol_id and rol_privilegio.pvo_id = privilegio.pvo_id and rol_privilegio.activo=1");
+    $consulta->execute() or die("Error listando las relacionas");
         return $consulta->fetchAll();    
-} 
+}  
 
 function listadoVicaria_Sacerdote(){    	
         $oPdo=SPDO2::getInstancia();
@@ -129,10 +129,20 @@ function listadodeAreas()
 function listadoparroquia_sacerdore()
 {
 	$oPdo=SPDO2::getInstancia();
-        $consulta=$oPdo->pdo->prepare("SELECT a.nombre,b.nombre,c.fecha_ini,c.fecha_fin,c.sce_id,c.pqa_id FROM sacerdote as a,parroquia as b,parroquia_sacerdote as c WHERE c.sce_id=a.sce_id AND c.pqa_id=b.pqa_id  AND c.activo=1");
+        $consulta=$oPdo->pdo->prepare("SELECT 
+					c.pqa_id,
+					c.sce_id,
+					a.nombre,
+					b.nombre,
+					c.fecha_ini,
+					c.fecha_fin,
+					c.sce_id,
+					c.pqa_id 
+					FROM sacerdote as a,parroquia as b,parroquia_sacerdote as c WHERE c.sce_id=a.sce_id AND c.pqa_id=b.pqa_id  AND c.activo=1");
     	$consulta->execute() or die("Error Buscando sacerdotes asignados a parroquias");
         return $consulta->fetchAll();   
 }
+
 function listadodeEventos()
 {
 	$oPdo=SPDO2::getInstancia();
@@ -140,6 +150,40 @@ function listadodeEventos()
     	$consulta->execute() or die("Error Buscando las Areas");
         return $consulta->fetchAll();   
 }
-
+function GruposParroquia()
+{
+	$oPdo=SPDO2::getInstancia();
+        $consulta=$oPdo->pdo->prepare("SELECT B.nombre ,A.nombre,A.telefono FROM grupojuvenil AS A, parroquia AS B WHERE A.pqa_id=B.pqa_id AND A.activo=1 AND B.activo=1"); 
+    	$consulta->execute() or die("Error en el reporte");
+        return $consulta->fetchAll();   
+}
+function listadointegrante()
+{
+	$oPdo=SPDO2::getInstancia();
+        $consulta=$oPdo->pdo->prepare("SELECT * FROM integrantes"); 
+    	$consulta->execute() or die("Error en el reporte");
+        return $consulta->fetchAll();   
+}
+function eventointegrante($o)
+{
+	$oPdo=SPDO2::getInstancia();
+        $consulta=$oPdo->pdo->prepare("SELECT A.titulo FROM evento AS A,integrante_evento AS B WHERE A.evo_id=B.evo_id AND B.int_ced=".$o); 
+    	$consulta->execute() or die("Error en el reporte");
+        return $consulta->fetchAll();   
+}
+function listadoSacerdotes2($sar){
+    	
+        $oPdo=SPDO2::getInstancia();// crea un objeto de la clase SPDO2
+        $consulta=$oPdo->pdo->prepare("SELECT * FROM sacerdote where nombre='".$sar."'");
+    	$consulta->execute() or die("Error Buscando los sacerdotes");
+        return $consulta->fetchAll();    
+}
+function listadoParroquia2($sar){
+    	
+        $oPdo=SPDO2::getInstancia();
+        $consulta=$oPdo->pdo->prepare("SELECT * FROM parroquia where nombre='".$sar."'");
+    	$consulta->execute() or die("Error Buscando las parroquias");
+        return $consulta->fetchAll();    
+}
 //----------------------------------------
 ?>
